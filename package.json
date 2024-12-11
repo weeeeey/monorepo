@@ -1,20 +1,27 @@
 {
-    "name": "zero-mono",
-    "private": true,
-    "scripts": {
-        "build": "turbo build",
-        "dev": "turbo dev",
-        "dev-web": "turbo dev --filter web",
-        "lint": "turbo lint",
-        "format": "prettier --write \"**/*.{ts,tsx,md}\""
-    },
-    "devDependencies": {
-        "prettier": "^3.2.5",
-        "turbo": "^2.3.3",
-        "typescript": "5.5.4"
-    },
-    "packageManager": "pnpm@9.0.0",
-    "engines": {
-        "node": ">=18"
-    }
+  "name": "zero-mono",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "build-ui": "turbo build --filter @repo/ui",
+    "dev": "turbo dev",
+    "dev-web": "turbo dev --filter web",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "turbo": "^2.3.3",
+    "typescript": "5.5.4"
+  },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ]
+  },
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=18"
+  }
 }

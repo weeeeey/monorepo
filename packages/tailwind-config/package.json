@@ -1,15 +1,16 @@
 {
-    "name": "@repo/tailwind-config",
-    "version": "1.0.0",
-    "private": true,
-    "exports": {
-        ".": "./index.ts"
-    },
-    "devDependencies": {
-        "@repo/typescript-config": "workspace:*",
-        "@types/node": "^22.10.1",
-        "tailwindcss": "^3.4.16",
-        "tailwindcss-animate": "^1.0.7",
-        "typescript": "^5.7.2"
-    }
+  "name": "@repo/tailwind-config",
+  "version": "1.0.0",
+  "private": true,
+  "exports": {
+    ".": "./index.ts",
+    "./css": "./index.css"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^22.10.1",
+    "tailwindcss": "^3.4.16",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5.7.2"
+  }
 }
