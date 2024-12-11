@@ -1,0 +1,16 @@
+{
+  "extends": "@repo/typescript-config/base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@/hooks/*": ["hooks/*"]
+    },
+    "allowJs": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "stripInternal": true
+  },
+  "include": ["hooks/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

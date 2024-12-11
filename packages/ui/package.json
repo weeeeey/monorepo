@@ -5,6 +5,8 @@
   "private": true,
   "exports": {
     ".": "./components/ui/index.ts",
+    "./button": "./components/ui/button.tsx",
+    "./dialog": "./components/ui/dialog.tsx",
     "./utils": "./lib/utils.ts"
   },
   "scripts": {
@@ -26,6 +28,7 @@
     "typescript": "5.5.4"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.2",
     "@radix-ui/react-slot": "^1.1.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
