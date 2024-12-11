@@ -1,10 +1,16 @@
 import { useEffect, useState } from "react";
 
-const useIsMobile = () => {
+/**
+ * 주어진 너비를 기준으로 현재 화면이 모바일인지 여부를 반환하는 커스텀 훅
+ *
+ * @param width - 기준 너비 (기본값: 420px)
+ * @returns boolean - 모바일 여부
+ */
+const useIsMobile = (width = 420): boolean => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 744px)");
+    const mediaQuery = window.matchMedia(`(max-width: ${width}px)`);
 
     const handleMediaQueryChange = (e: MediaQueryListEvent) => {
       setIsMobile(e.matches);
