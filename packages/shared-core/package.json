@@ -1,10 +1,11 @@
 {
-  "name": "@repo/shared-hooks",
+  "name": "@repo/shared-core",
   "version": "1.0.0",
   "type": "module",
   "private": true,
   "exports": {
-    ".": "./hooks/index.ts"
+    "./hooks": "./hooks/index.ts",
+    "./stores": "./stores/index.ts"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,7 +15,8 @@
     "lodash": "^4.17.21",
     "next": "^14.2.18",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "zustand": "^5.0.2"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
@@ -27,6 +29,7 @@
   "peerDependencies": {
     "lodash": "^4.17.21",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "zustand": "^5.0.2"
   }
 }

@@ -12,7 +12,7 @@ interface ReturnType {
  *   isDown: boolean;
  * }
  */
-export const useScrollDirection = (throttleTime = 200): ReturnType => {
+const useScrollDirection = (throttleTime = 200): ReturnType => {
   const [isDown, setIsDown] = useState(false);
   const prevScrollRef = useRef(0);
 
@@ -30,3 +30,5 @@ export const useScrollDirection = (throttleTime = 200): ReturnType => {
 
   return { isDown };
 };
+
+export default useScrollDirection;

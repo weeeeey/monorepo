@@ -4,13 +4,14 @@
     "outDir": "dist",
     "baseUrl": ".",
     "paths": {
-      "@/hooks/*": ["hooks/*"]
+      "@/hooks/*": ["hooks/*"],
+      "@/stores/*": ["stores/*"]
     },
     "allowJs": true,
     "module": "ESNext",
     "moduleResolution": "bundler",
     "stripInternal": true
   },
-  "include": ["hooks/**/*"],
+  "include": ["hooks/**/*", "stores/**/*"],
   "exclude": ["node_modules", "dist"]
 }
