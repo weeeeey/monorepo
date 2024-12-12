@@ -26,7 +26,7 @@ const useIsMobile = (width = 420): boolean => {
     return () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
-  }, []);
+  }, [width]);
 
   return isMobile;
 };

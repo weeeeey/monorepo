@@ -1,6 +1,6 @@
 "use client";
-import { useEffect, useState, useRef } from "react";
 import { throttle } from "lodash";
+import { useEffect, useRef,useState } from "react";
 
 interface ReturnType {
   isDown: boolean;
@@ -27,7 +27,7 @@ const useScrollDirection = (throttleTime = 200): ReturnType => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScrollRef]);
+  }, [prevScrollRef, throttleTime]);
 
   return { isDown };
 };

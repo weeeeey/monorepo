@@ -1,13 +1,13 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 
-interface IntersectionObserverProps<T> {
+interface IntersectionObserverProps {
   threshold?: number;
   once?: boolean;
 }
 
 const useIntersectionObserver = <T extends Element>(
-  options?: IntersectionObserverProps<T>,
+  options?: IntersectionObserverProps,
 ) => {
   const [isIntersecting, setIsIntersecting] = useState(false);
   const ref = useRef<T | null>(null);

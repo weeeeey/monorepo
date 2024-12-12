@@ -1,6 +1,7 @@
 "use client";
 
 import { useToast } from "@repo/shared-core/hooks";
+import { useEffect } from "react";
 
 export default function Home() {
   const { toast } = useToast();
