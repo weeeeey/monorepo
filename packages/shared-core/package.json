@@ -5,10 +5,9 @@
   "private": true,
   "exports": {
     "./hooks": "./hooks/index.ts",
-    "./stores": "./stores/index.ts"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "./stores": "./stores/index.ts",
+    "./actions": "./actions/index.ts",
+    "./nextjs-utils": "./nextjs-utils/index.ts"
   },
   "license": "ISC",
   "dependencies": {

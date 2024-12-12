@@ -5,13 +5,15 @@
     "baseUrl": ".",
     "paths": {
       "@/hooks/*": ["hooks/*"],
-      "@/stores/*": ["stores/*"]
+      "@/stores/*": ["stores/*"],
+      "@/actions/*": ["actions/*"],
+      "@/nextjs-utils/*": ["nextjs-utils/*"]
     },
     "allowJs": true,
     "module": "ESNext",
     "moduleResolution": "bundler",
     "stripInternal": true
   },
-  "include": ["hooks/**/*", "stores/**/*"],
+  "include": ["hooks/**/*", "stores/**/*", "actions/**/*", "nextjs-utils/**/*"],
   "exclude": ["node_modules", "dist"]
 }
