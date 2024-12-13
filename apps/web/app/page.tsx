@@ -1,24 +1,35 @@
 "use client";
 
-import { useToast } from "@repo/shared-core/hooks";
+import { type FormSubmitData, useCustomForm } from "@repo/shared-core/hooks";
+import { z } from "zod";
+
+const optionalSchema = {
+  aaaa: z.string().nonempty("aaaa"),
+  bbbb: z.string().nonempty("bbbb"),
+};
+type optionalSchema = typeof optionalSchema;
 
 export default function Home() {
-  const { toast } = useToast();
+  const { handleSubmit, register, formSchema } =
+    useCustomForm<optionalSchema>(optionalSchema);
+
+  const onSubmit: FormSubmitData<typeof formSchema> = (data) => {
+    console.log(data);
+  };
+  const invalid = (e: unknown) => {
+    console.log(e);
+  };
 
   return (
     <div className="h-[200vh] space-y-4">
-      <button
-        onClick={() => {
-          toast({
-            title: "Hello",
-            description: "This is a toast",
-            duration: 5000,
-          });
-        }}
-      >
-        aa
-      </button>
-      <div className="bg-black text-white">/apps/web page.tsx의 내용</div>
+      <form onSubmit={handleSubmit(onSubmit, invalid)}>
+        aaa
+        <input className="border" {...register("email")} type="text" />
+        <input className="border" {...register("password")} type="text" />
+        <input className="border" {...register("passwordCheck")} type="text" />
+        <input className="border" {...register("username")} type="text" />
+        <button type="submit">bb</button>
+      </form>
     </div>
   );
 }
