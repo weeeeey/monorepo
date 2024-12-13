@@ -4,13 +4,26 @@
   "type": "module",
   "private": true,
   "exports": {
-    "./hooks": "./hooks/index.ts",
-    "./stores": "./stores/index.ts",
-    "./actions": "./actions/index.ts",
-    "./nextjs-utils": "./nextjs-utils/index.ts"
+    "./hooks": {
+      "types": "./dist/hooks/index.d.ts",
+      "default": "./dist/hooks/index.js"
+    },
+    "./stores": {
+      "types": "./dist/stores/index.d.ts",
+      "default": "./dist/stores/index.js"
+    },
+    "./actions": {
+      "types": "./dist/actions/index.d.ts",
+      "default": "./dist/actions/index.js"
+    },
+    "./nextjs-utils": {
+      "types": "./dist/nextjs-utils/index.d.ts",
+      "default": "./dist/nextjs-utils/index.js"
+    }
   },
   "scripts": {
-    "lint": "eslint . --max-warnings 0"
+    "lint": "eslint . --max-warnings 0",
+    "build": "tsc && tsc-alias"
   },
   "license": "ISC",
   "dependencies": {
@@ -29,6 +42,7 @@
     "@types/lodash": "^4.17.13",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "tsc-alias": "^1.8.10",
     "typescript": "5.5.4"
   },
   "peerDependencies": {

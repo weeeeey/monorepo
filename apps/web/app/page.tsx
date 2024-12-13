@@ -1,11 +1,8 @@
 "use client";
-
-import { Button } from "@repo/ui/button";
+import { useIsMobile } from "@repo/shared-core/hooks";
 
 export default function Home() {
-  return (
-    <div className="space-y-4">
-      <Button onClick={() => {}}>aa</Button>
-    </div>
-  );
+  const isMobile = useIsMobile();
+  console.log(isMobile);
+  return <div className="space-y-4"></div>;
 }
